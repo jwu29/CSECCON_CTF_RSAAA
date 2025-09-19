@@ -23,7 +23,8 @@ for x in range(2**16):
     if decoded is not None:
         if "CSEC" in decoded:
             print(decoded)
-## Print result: CGoCqmsO7aCSEC{R1vest$h@m1r&delm@n}SEDnqDeYJl
-## Flag is embedded in the middle: CSEC{R1vest$h@m1r&delm@n}
+    ## Print result: CGoCqmsO7aCSEC{R1vest$h@m1r&delm@n}SEDnqDeYJl
+    ## Flag is embedded in the middle: CSEC{R1vest$h@m1r&delm@n}
             print(format(d, "x"))
-## d: b6bc0230f44e5f0125ea62d5d2f0e302465ae77efdda8182c9567c767faeaa84c8cf74c4fe9dc61371590b7424c3c4a6fa3987758cf28904c9fa0d943c6eac797381b65af3d222af2b03b5de73dba3aac449156883913fad396851b35c9c7285b741ccb37308d5953863157fbf80203f6cebc94c1b470b8e7404b9fcbcad529
+    ## d: b6bc0230f44e5f0125ea62d5d2f0e302465ae77efdda8182c9567c767faeaa84c8cf74c4fe9dc61371590b7424c3c4a6fa3987758cf28904c9fa0d943c6eac797381b65af3d222af2b03b5de73dba3aac449156883913fad396851b35c9c7285b741ccb37308d5953863157fbf80203f6cebc94c1b470b8e7404b9fcbcad529
+
