@@ -1,0 +1,26 @@
+To solve this problem, we must first understand how RSA works mathematically.
+
+The plaintext is UTF-8 encoded into bytes, so it returns a long hexadecimal number. From the question, we know that the complete public key (n,e) and the ciphertext c, but the private key d has its final 4 hexadecimal digits obscured. Suppose the original message encoded, or plaintext, is m.
+
+In RSA, the encryption method is
+(m ** e) % n = c
+
+and the decryption method is
+(c ** d) % n = m
+
+We're interested in decryption to find the value of d. To solve this question, we use a brute-force approach as follows:
+1. Guess random 4 hexadecimal digits, and place at the end of the private key d.
+2. Apply the decryption method, and obtain a result for plaintext m.
+3. Attempt to decode m using UTF-8.
+
+The vital step in solving this question is realizing the word 'CSEC' appears in all flags, so we can implement a search for the string 'CSEC' after decoding. Hence our final step is
+
+4. Check if 'CSEC' is in m.
+
+I've included a Python file which shows the actual implementation of these steps (Solution.py).
+
+by Josiah Wu, 19 Sep 2025.
+
+
+
+
