@@ -9,16 +9,17 @@ and the decryption method is
 (c ** d) % n = m
 
 We're interested in decryption to find the value of d. To solve this question, we use a brute-force approach as follows:
-Step 1. Guess random 4 hexadecimal digits, and place at the end of the private key d.
+Step 1. Guess random 4 hexadecimal digits, and place them at the end of the private key d.
 Step 2. Apply the decryption method and obtain a result for plaintext m.
 Step 3. Attempt to decode m using UTF-8.
 
-The vital step in solving this question is realizing the word 'CSEC' appears in all flags, so we can implement a search for the string 'CSEC' after decoding. Hence our final step is
+The vital step in solving this question is realising the word 'CSEC' appears in all flags, so we can implement a search for the string 'CSEC' after decoding. Hence, our final step is
 Step 4. Check if 'CSEC' is in m.
 
 I've included a Python file which shows the actual implementation of these steps (Solution.py).
 
 by Josiah Wu, 19 Sep 2025.
+
 
 
 
